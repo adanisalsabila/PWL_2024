@@ -63,7 +63,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/post', [PostController::class, 'index']);
     Route::get('/event', [EventController::class, 'index']);
     });
-    
+
+//percobaan6
+Route::redirect('/here', '/there');
+
 
 ?>
 
