@@ -10,4 +10,3 @@ public function hello() {
  return 'Hello World';
 }
 }
-Route::get(‘/hello’, [WelcomeController::class,’hello’]);

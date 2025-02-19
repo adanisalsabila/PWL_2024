@@ -1,8 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController; // Jika belum ada, tambahkan ini
+use App\Http\Controllers\WelcomeController; 
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\UserController; 
+use App\Http\Controllers\PostController; 
 
+Route::get('/posts', [PostController::class, 'index']); // Contoh route
+
+Route::get('/users', [UserController::class, 'index']); // Contoh route
+
+Route::resource('photos', PhotoController::class);
 
 Route::get('/', function () {
     return view('welcome');
