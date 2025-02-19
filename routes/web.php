@@ -27,8 +27,13 @@ Route::get('/posts/{post}/comments/{comment}', function($postId, $commentId) {
     });
     
 Route::get('/user/{name?}', function ($name=null) {
-    return 'Nama saya '.$name;
+    return 'Adani Salsabila'.$name;
 });
+
+Route::get('/user/{name?}', function ($name='John') {
+    return 'Adani Salsabila'.$name;
+    });
+    
 
 ?>
 
