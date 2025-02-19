@@ -14,6 +14,16 @@ Route::get('/number1', function () {
     return 'This is route for number 1'; 
 });
 
+Route::get('/world', function () {
+    return 'World';
+   });
+
+Route::get('/user/{name}', function ($name) {
+    return 'Adani Salsabila'.$name;
+    });
+    
+   
+
 ?>
 
 
