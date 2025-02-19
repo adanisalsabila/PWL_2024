@@ -67,6 +67,9 @@ Route::prefix('admin')->group(function () {
 //percobaan6
 Route::redirect('/here', '/there');
 
+//percobaan7
+Route::view('/welcome', 'welcome');
+Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
 
 ?>
 
