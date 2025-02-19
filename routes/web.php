@@ -33,7 +33,11 @@ Route::get('/user/{name?}', function ($name=null) {
 Route::get('/user/{name?}', function ($name='John') {
     return 'Adani Salsabila'.$name;
     });
-    
+
+Route::get('/user/profile', function() {
+    //
+    })->name('profile');
+       
 
 ?>
 
