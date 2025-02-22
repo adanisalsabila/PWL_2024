@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController; 
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\UserController; 
-use App\Http\Controllers\PostController; 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 
 Route::get('/posts', [PostController::class, 'index']); // Contoh route
 
@@ -89,4 +89,18 @@ Route::view('/greeting', 'welcome', ['name' => 'Taylor']); // Ganti nama view ag
 // Kode controller yang benar (diletakkan di file app/Http/Controllers/WelcomeController.php)
 // Route untuk controller juga harus di routes/web.php
 Route::get('/hello-controller', [WelcomeController::class, 'hello']); // Gunakan tanda kutip yang benar
+
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Adani']);
+});
+
+Route::get('/greeting', function () {
+    return view('blog.hello', ['name' => 'Andi']);
+});
+
+Route::get('/greeting', [
+    WelcomeController::class,
+    'greeting'
+]);
+
 
